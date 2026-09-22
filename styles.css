@@ -272,6 +272,18 @@ a { color: inherit; }
 .art__c--2 { width: 44px; left: 46%; top: 7%; animation-delay: -2.5s; --coin: var(--orange); }
 @media (max-width: 860px) { .art { grid-row: auto; min-height: 320px; order: 3; } }
 
+
+/* =========================================================
+   2b · BENEFICIOS
+   ========================================================= */
+.sec--lime .mark--pink { transform: rotate(1.5deg); }
+
+.benefit { display: flex; flex-direction: column; gap: 8px; justify-content: center; min-height: 0; padding-block: clamp(18px, 2.4vw, 26px); }
+.benefit__title { font-weight: 900; letter-spacing: -.02em; line-height: 1.1; font-size: clamp(1.2rem, 2vw, 1.5rem); }
+.benefit__body { font-weight: 600; line-height: 1.4; font-size: clamp(.95rem, 1.3vw, 1.08rem); opacity: .92; }
+.card--navy.benefit .benefit__body,
+.card--pink.benefit .benefit__body { opacity: .9; }
+
 /* =========================================================
    3 · RESULTADOS
    ========================================================= */
@@ -296,8 +308,43 @@ a { color: inherit; }
 .stat__copy b { font-weight: 900; }
 @media (max-width: 540px) { .stat--text { flex-direction: column; align-items: flex-start; } }
 
+
 /* =========================================================
-   4 · MODO NIÑOS
+   4 · BRENKIDS PARA COLEGIOS
+   ========================================================= */
+.school__lead { font-size: clamp(1.05rem, 1.8vw, 1.35rem); font-weight: 600; line-height: 1.4; max-width: 56ch; margin-top: clamp(18px, 2.6vw, 30px); }
+
+.school__steps { list-style: none; margin: clamp(24px, 3.2vw, 40px) 0; padding: 0; display: grid; gap: clamp(16px, 2.2vw, 26px); }
+.school__step { display: flex; gap: clamp(14px, 2vw, 22px); align-items: center; }
+.school__num {
+  flex: none; display: grid; place-items: center; width: 44px; height: 44px;
+  border: var(--bw) solid var(--ink); border-radius: 50%;
+  background: var(--lime); color: var(--ink); font-weight: 900; font-size: 1.15rem;
+  box-shadow: var(--sh-sm);
+}
+.school__step:nth-child(2) .school__num { background: var(--orange); }
+.school__step:nth-child(3) .school__num { background: var(--pink); color: var(--white); }
+.school__stitle { font-weight: 900; letter-spacing: -.02em; font-size: clamp(1.1rem, 1.8vw, 1.35rem); margin-bottom: 4px; }
+.school__stext { font-weight: 600; line-height: 1.4; font-size: clamp(.95rem, 1.3vw, 1.05rem); }
+
+.school__cta {
+  display: flex; align-items: center; gap: 16px;
+  font-weight: 700; font-size: clamp(.95rem, 1.4vw, 1.1rem); line-height: 1.4;
+}
+.school__cta-icon { flex: none; width: clamp(36px, 4.5vw, 48px); height: auto; }
+.school__cta a { color: var(--lime); font-weight: 900; text-decoration: underline; text-underline-offset: 3px; }
+.school__cta a:hover { color: var(--white); }
+
+.school__video { display: flex; align-items: center; justify-content: center; }
+.video-frame {
+  position: relative; width: min(100%, 320px); aspect-ratio: 9 / 16;
+  padding: 10px; overflow: hidden; transform: rotate(-1.5deg);
+}
+.video-frame iframe { position: absolute; inset: 10px; width: calc(100% - 20px); height: calc(100% - 20px); border: 0; border-radius: 14px; }
+@media (max-width: 860px) { .video-frame { transform: none; margin-inline: auto; } }
+
+/* =========================================================
+   5 · MODO NIÑOS
    ========================================================= */
 .sec--lime .display { margin-bottom: clamp(4px, 1.5vw, 16px); }
 
@@ -394,7 +441,7 @@ a { color: inherit; }
 @keyframes matched { 0%,100% { transform: rotateY(180deg) scale(1); } 50% { transform: rotateY(180deg) scale(1.1); } }
 
 /* =========================================================
-   5 · LLÉVALO A CASA
+   6 · LLÉVALO A CASA
    ========================================================= */
 .take { display: flex; flex-direction: column; justify-content: center; gap: clamp(20px, 3vw, 36px); }
 .take__sub { font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 600; line-height: 1.35; max-width: 34ch; }
