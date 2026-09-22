@@ -2,10 +2,6 @@
 (() => {
   'use strict';
 
-  /* ---------- Configuración ---------- */
-  // TODO: reemplaza por la URL real a la que debe llevar el QR.
-  const QR_URL = 'https://example.com/brenkids';
-
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- 1 · Video de bienvenida ---------- */
@@ -201,19 +197,5 @@
 
     memoReset.addEventListener('click', build);
     build();
-  }
-
-  /* ---------- 5 · QR ---------- */
-  const qrHost = document.getElementById('qrCode');
-  if (qrHost && typeof qrcode === 'function') {
-    const qr = qrcode(0, 'M');
-    qr.addData(QR_URL);
-    qr.make();
-    qrHost.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
-    const svg = qrHost.querySelector('svg');
-    if (svg) {
-      svg.querySelectorAll('path').forEach((n) => n.setAttribute('fill', '#141a52'));
-      svg.querySelectorAll('rect').forEach((n) => n.setAttribute('fill', '#ffffff'));
-    }
   }
 })();
